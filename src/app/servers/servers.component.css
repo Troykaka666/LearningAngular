@@ -1,0 +1,8 @@
+.display{
+    display: none;
+}
+
+.changeColor{
+    background-color: aquamarine;
+    color: blueviolet;
+}

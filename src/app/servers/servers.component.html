@@ -1,0 +1,34 @@
+<label >Server Name</label>
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+  onUpdateServerName(event: any){
+    this.serverName = (<HTMLInputElement>event.target).value;  
+  }--in typescript
+-->
+
+<!-- two-way-binding: it will trigger the input event, and also change the value of variable in typescript file at the sametime-->
+<input type="text" class="form-control" [(ngModel)] = "serverName">
+<!-- <p>{{serverName}}</p> -->
+<button class="btn btn-primary" [disabled]="!allowNewServer"
+(click)="onCreateServer()">Add Server</button>
+<!-- <p [innerText] ="allowNewServer"></p> -->
+<!-- <p>{{serverCreationStatus}}</p> -->
+<p *ngIf="serverCreated; else noServer">Server was createdm server name is {{serverName}}</p>
+<ng-template #noServer>
+  <p>No server was created</p>
+</ng-template>
+
+<hr>
+<!-- <br>
+<label for="">Assignment 2</label>
+with ngModel in A, it will return the input value from DOEM to the assigned variable
+
+<input type="text" class="form-control" [(ngModel)] = "inputN">
+<button class="btn btn-primary" [disabled] = " inputN === ''" (click)= "inputN = ''">Submit</button>
+<p>{{inputN}}</p> -->
+
+<br>
+<label for="">Assignment 3</label>
+<button class="btn btn-primary" (click)="toggleP()">Award</button>
+<p *ngIf="displaytext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, delectus.</p>
+<p *ngFor="let item of toggleTimes" [ngClass]="{'changeColor': addClass()}">{{item}}</p>
+<app-server *ngFor="let e of servers" ></app-server>
