@@ -26,9 +26,11 @@ with ngModel in A, it will return the input value from DOEM to the assigned vari
 <button class="btn btn-primary" [disabled] = " inputN === ''" (click)= "inputN = ''">Submit</button>
 <p>{{inputN}}</p> -->
 
-<br>
+<!-- <br>
 <label for="">Assignment 3</label>
 <button class="btn btn-primary" (click)="toggleP()">Award</button>
 <p *ngIf="displaytext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, delectus.</p>
-<p *ngFor="let item of toggleTimes" [ngClass]="{'changeColor': addClass()}">{{item}}</p>
+<p *ngFor="let item of toggleTimes; let i = index" [ngStyle]="{backgroundColor: i >=5 ? 'blue' : 'transprent'}">"number of "{{item}}</p> -->
+
+
 <app-server *ngFor="let e of servers" ></app-server>
